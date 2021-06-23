@@ -62,10 +62,22 @@ Each API contains an object with the following properties:
 - `where`: The resource type where the regular expression needs to match in
   order to be valid. Either `"JavaScript"` or `"Web App Manifest"`.
 - `supported`: A function that returns a promise that resolves with `true`,
-  `false`, or `undefined`, depdendent on whether the API is supported or not
+  `false`, or `undefined`, dependent on whether the API is supported or not
   (`undefined` means no feature detection method exists).
 - `featureDetection`: The source code of the feature detection method, so you
   can use it in an `eval()` for example.
+
+## Depending projects
+
+This data is used in the following projects:
+
+- The
+  [Capabilities report](https://almanac.httparchive.org/en/2020/capabilities) of
+  the [HTTP Almanac](https://almanac.httparchive.org/) in the file
+  [`custom_metrics/fugu-apis.js`](https://github.com/HTTPArchive/legacy.httparchive.org/blob/master/custom_metrics/fugu-apis.js).
+- The
+  [Project Fugu&nbsp;🐡 API Detector](https://github.com/tomayac/project-fugu-api-detector)
+  browser extension.
 
 ## License
 
