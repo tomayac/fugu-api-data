@@ -55,7 +55,7 @@ npm start
 
 ## Data format
 
-Each API contains an object with the following properties:
+Each API is represented as an object with the following properties:
 
 - `regEx`: A regular expression that you can use to detect the API of interest
   in source code when you do static source code analysis.
