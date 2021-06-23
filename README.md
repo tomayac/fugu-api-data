@@ -57,8 +57,8 @@ npm start
 
 Each API contains an object with the following properties:
 
-- `regEx`: A regular expression that you can use to detect the API in source
-  code when you do static source code analysis.
+- `regEx`: A regular expression that you can use to detect the API of interest
+  in source code when you do static source code analysis.
 - `where`: The resource type where the regular expression needs to match in
   order to be valid. Either `"JavaScript"` or `"Web App Manifest"`.
 - `supported`: A function that returns a promise that resolves with `true`,
@@ -77,7 +77,10 @@ This data is used in the following projects:
   [`custom_metrics/fugu-apis.js`](https://github.com/HTTPArchive/legacy.httparchive.org/blob/master/custom_metrics/fugu-apis.js).
 - The
   [Project Fugu&nbsp;🐡 API Detector](https://github.com/tomayac/project-fugu-api-detector)
-  browser extension.
+  browser extension in the files
+  [`patternsFunc.js`](https://github.com/tomayac/project-fugu-api-detector/blob/main/patternsFunc.js#:~:text=import%20patterns%20from%20'.%2Fpatterns.mjs'%3B)
+  and
+  [`background.js`](<https://github.com/tomayac/project-fugu-api-detector/blob/main/background.js#:~:text=importscripts(%5B'patterns.js'%5D)%3B>).
 
 ## License
 
