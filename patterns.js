@@ -68,9 +68,10 @@ const patterns = {
     regEx: /periodicSync\.register\s*\(/g,
     where: 'JavaScript',
     supported: (async () =>
+      'serviceWorker' in navigator &&
       'periodicSync' in
-      ((await navigator.serviceWorker?.ready) || self.registration))(),
-    featureDetection: `(async () => 'periodicSync' in (await navigator.serviceWorker?.ready || self.registration))()`,
+        ((await navigator.serviceWorker?.ready) || self.registration))(),
+    featureDetection: `(async () => 'serviceWorker' in navigator && 'periodicSync' in (await navigator.serviceWorker?.ready || self.registration))()`,
     documentation: 'https://web.dev/periodic-background-sync/',
   },
   'Badging': {
@@ -112,9 +113,10 @@ const patterns = {
     regEx: /index\.getAll\s*\(/g,
     where: 'JavaScript',
     supported: (async () =>
+      'serviceWorker' in navigator &&
       'index' in
-      ((await navigator.serviceWorker?.ready) || self.registration))(),
-    featureDetection: `(async () => 'index' in (await navigator.serviceWorker?.ready || self.registration))()`,
+        ((await navigator.serviceWorker?.ready) || self.registration))(),
+    featureDetection: `(async () => 'serviceWorker' in navigator && 'index' in (await navigator.serviceWorker?.ready || self.registration))()`,
     documentation: 'https://web.dev/content-indexing-api/',
   },
   'Credential Management': {
