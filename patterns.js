@@ -380,6 +380,14 @@ const patterns = {
     documentation: 'https://web.dev/gamepad/',
     blinkFeatureID: 1916,
   },
+  'WebGPU': {
+    regEx: /navigator\.gpu\.requestAdapter\s*\(/g,
+    where: 'JavaScript',
+    supported: (async () => 'gpu' in navigator)(),
+    featureDetection: `(async () => 'gpu' in navigator)()`,
+    documentation: 'https://web.dev/webgpu',
+    blinkFeatureID: 3888,
+  },
   'Window Controls Overlay': {
     regEx: /"window\-controls\-overlay"/g,
     where: 'Web App Manifest',
