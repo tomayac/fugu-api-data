@@ -66,7 +66,7 @@ const patterns = {
     blinkFeatureID: 1870,
   },
   'Compression Streams': {
-    regEx: /new CompressionStream\s*\(/g,
+    regEx: /new\s+CompressionStream\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'CompressionStream' in self)(),
     featureDetection: `(async () => 'CompressionStream' in self)()`,
@@ -93,7 +93,7 @@ const patterns = {
     blinkFeatureID: 2726,
   },
   'Shape Detection (Barcodes)': {
-    regEx: /new BarcodeDetector\s*\(/g,
+    regEx: /new\s+BarcodeDetector\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'BarcodeDetector' in self)(),
     featureDetection: `(async () => 'BarcodeDetector' in self)()`,
@@ -101,7 +101,7 @@ const patterns = {
     blinkFeatureID: 3711,
   },
   'Shape Detection (Faces)': {
-    regEx: /new FaceDetector\s*\(/g,
+    regEx: /new\s+FaceDetector\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'FaceDetector' in self)(),
     featureDetection: `(async () => 'FaceDetector' in self)()`,
@@ -109,7 +109,7 @@ const patterns = {
     blinkFeatureID: 3712,
   },
   'Shape Detection (Texts)': {
-    regEx: /new TextDetector\s*\(/g,
+    regEx: /new\s+TextDetector\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'TextDetector' in self)(),
     featureDetection: `(async () => 'TextDetector' in self)()`,
@@ -153,7 +153,8 @@ const patterns = {
     blinkFeatureID: 2880,
   },
   'File System Access': {
-    regEx: /showOpenFilePicker\s*\(/g,
+    regEx:
+      /showOpenFilePicker\s*\(|showSaveFilePicker\s*\(|showDirectoryPicker\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'showOpenFilePicker' in self)(),
     featureDetection: `(async () => 'showOpenFilePicker' in self)()`,
@@ -194,7 +195,7 @@ const patterns = {
     blinkFeatureID: 2546,
   },
   'WebNFC': {
-    regEx: /new NDEFReader\s*\(/g,
+    regEx: /new\s+NDEFReader\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'NDEFReader' in self)(),
     featureDetection: `(async () => 'NDEFReader' in self)()`,
@@ -211,7 +212,7 @@ const patterns = {
     blinkFeatureID: undefined,
   },
   'WebCodecs': {
-    regEx: /new MediaStreamTrackProcessor\s*\(/g,
+    regEx: /new\s+MediaStreamTrackProcessor\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'MediaStreamTrackProcessor' in self)(),
     featureDetection: `(async () => 'MediaStreamTrackProcessor' in self)()`,
@@ -228,7 +229,7 @@ const patterns = {
     blinkFeatureID: 3397,
   },
   'Idle Detection': {
-    regEx: /new IdleDetector\s*\(/g,
+    regEx: /new\s+IdleDetector\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'IdleDetector' in self)(),
     featureDetection: `(async () => 'IdleDetector' in self)()`,
@@ -252,7 +253,7 @@ const patterns = {
     blinkFeatureID: 3893,
   },
   'Compute Pressure': {
-    regEx: /new ComputePressureObserver\s*\(/g,
+    regEx: /new\s+ComputePressureObserver\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'ComputePressureObserver' in self)(),
     featureDetection: `(async () => 'ComputePressureObserver' in self)()`,
@@ -260,7 +261,7 @@ const patterns = {
     blinkFeatureID: 3899,
   },
   'Accelerometer': {
-    regEx: /new Accelerometer\s*\(/g,
+    regEx: /new\s+Accelerometer\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'Accelerometer' in self)(),
     featureDetection: `(async () => 'Accelerometer' in self)()`,
@@ -268,7 +269,7 @@ const patterns = {
     blinkFeatureID: 1899,
   },
   'Gyroscope': {
-    regEx: /new Gyroscope\s*\(/g,
+    regEx: /new\s+Gyroscope\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'Gyroscope' in self)(),
     featureDetection: `(async () => 'Gyroscope' in self)()`,
@@ -276,7 +277,7 @@ const patterns = {
     blinkFeatureID: 1906,
   },
   'Absolute Orientation Sensor': {
-    regEx: /new AbsoluteOrientationSensor\s*\(/g,
+    regEx: /new\s+AbsoluteOrientationSensor\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'AbsoluteOrientationSensor' in self)(),
     featureDetection: `(async () => 'AbsoluteOrientationSensor' in self)()`,
@@ -284,7 +285,7 @@ const patterns = {
     blinkFeatureID: 1900,
   },
   'Relative Orientation Sensor': {
-    regEx: /new RelativeOrientationSensor\s*\(/g,
+    regEx: /new\s+RelativeOrientationSensor\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'RelativeOrientationSensor' in self)(),
     featureDetection: `(async () => 'RelativeOrientationSensor' in self)()`,
@@ -292,7 +293,7 @@ const patterns = {
     blinkFeatureID: 2019,
   },
   'Gravity Sensor': {
-    regEx: /new GravitySensor\s*\(/g,
+    regEx: /new\s+GravitySensor\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'GravitySensor' in self)(),
     featureDetection: `(async () => 'GravitySensor' in self)()`,
@@ -300,7 +301,7 @@ const patterns = {
     blinkFeatureID: 3795,
   },
   'Linear Acceleration Sensor': {
-    regEx: /new LinearAccelerationSensor\s*\(/g,
+    regEx: /new\s+LinearAccelerationSensor\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'LinearAccelerationSensor' in self)(),
     featureDetection: `(async () => 'LinearAccelerationSensor' in self)()`,
@@ -308,7 +309,7 @@ const patterns = {
     blinkFeatureID: 2051,
   },
   'Magnetometer': {
-    regEx: /new Magnetometer\s*\(/g,
+    regEx: /new\s+Magnetometer\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'Magnetometer' in self)(),
     featureDetection: `(async () => 'Magnetometer' in self)()`,
@@ -316,7 +317,7 @@ const patterns = {
     blinkFeatureID: 1907,
   },
   'Ambient Light Sensor': {
-    regEx: /new AmbientLightSensor\s*\(\)/g,
+    regEx: /new\s+AmbientLightSensor\s*\(\)/g,
     where: 'JavaScript',
     supported: (async () => 'AmbientLightSensor' in self)(),
     featureDetection: `(async () => 'AmbientLightSensor' in self)()`,
@@ -332,7 +333,7 @@ const patterns = {
     blinkFeatureID: 3875,
   },
   'Notification Triggers': {
-    regEx: /showTrigger\s*\:\s*new TimestampTrigger\s*\(/g,
+    regEx: /showTrigger\s*\:\s*new\s+TimestampTrigger\s*\(/g,
     where: 'JavaScript',
     supported: (async () =>
       'Notification' in self && 'showTrigger' in Notification.prototype)(),
@@ -357,7 +358,7 @@ const patterns = {
     blinkFeatureID: 3388,
   },
   'WebSocketStream': {
-    regEx: /new WebSocketStream\s*\(/g,
+    regEx: /new\s+WebSocketStream\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'WebSocketStream' in self)(),
     featureDetection: `(async () => 'WebSocketStream' in self)()`,
@@ -365,7 +366,7 @@ const patterns = {
     blinkFeatureID: 3018,
   },
   'WebTransport': {
-    regEx: /new WebTransport\s*\(/g,
+    regEx: /new\s+WebTransport\s*\(/g,
     where: 'JavaScript',
     supported: (async () => 'WebTransport' in self)(),
     featureDetection: `(async () => 'WebTransport' in self)()`,

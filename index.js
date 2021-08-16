@@ -1,11 +1,11 @@
 const fs = require('fs/promises');
 const fetch = require('node-fetch');
 
-const SPREADHSEET_URL =
+const SPREADSHEET_URL =
   'https://spreadsheets.google.com/feeds/cells/1ndxh6sl0fSOLHFlMdSiLPqmGPMDVJqkJFYnQ0Hsmhwo/2/public/full?alt=json';
 
 (async () => {
-  const text = `{${await fetch(SPREADHSEET_URL)
+  const text = `{${await fetch(SPREADSHEET_URL)
     .then((response) => response.json())
     .then((data) =>
       data.feed.entry.map((entry) => entry.content.$t).join(''),
