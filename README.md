@@ -8,7 +8,7 @@ in two formats: `pattern.js` and `pattern.mjs`.
 The raw data in this repository comes from a
 [Google spreadsheet](https://docs.google.com/spreadsheets/d/1ndxh6sl0fSOLHFlMdSiLPqmGPMDVJqkJFYnQ0Hsmhwo/edit?usp=sharing)
 that is published as a
-[JSON file](https://spreadsheets.google.com/feeds/cells/1ndxh6sl0fSOLHFlMdSiLPqmGPMDVJqkJFYnQ0Hsmhwo/2/public/full?alt=json).
+[JSON file](https://sheets.googleapis.com/v4/spreadsheets/1ndxh6sl0fSOLHFlMdSiLPqmGPMDVJqkJFYnQ0Hsmhwo/values/Sheet2?alt=json&key=AIzaSyCkROWBarEOJ9hQJggyrlUFulOFA4h6AW0).
 The `index.js` script fetches this data, prettifies it, and saves it locally in
 a module and in a no-module variant.
 
