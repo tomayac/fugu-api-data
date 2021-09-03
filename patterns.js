@@ -390,7 +390,7 @@ const patterns = {
     blinkFeatureID: 3888,
   },
   'VirtualKeyboard': {
-    regEx: /navigator\.virtualKeyboard\.show\s*\(/g,
+    regEx: /navigator\.virtualKeyboard/g,
     where: 'JavaScript',
     supported: (async () => 'virtualKeyboard' in navigator)(),
     featureDetection: `(async () => 'virtualKeyboard' in navigator)()`,
