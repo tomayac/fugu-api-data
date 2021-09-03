@@ -1,6 +1,6 @@
 {
   "name": "fugu-api-data",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Data about Project Fugu 🐡 APIs.",
   "main": "index.js",
   "scripts": {
