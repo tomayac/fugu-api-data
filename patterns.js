@@ -133,11 +133,8 @@ const patterns = {
   'Payment Handler': {
     regEx: /\.paymentManager\.instruments\.set\s*\(/g,
     where: 'JavaScript',
-    supported: (async () =>
-      'serviceWorker' in navigator &&
-      'paymentHandler' in
-        ((await navigator.serviceWorker?.ready) || self.registration))(),
-    featureDetection: `(async () => 'serviceWorker' in navigator && 'paymentHandler' in (await navigator.serviceWorker?.ready || self.registration))()`,
+    supported: (async () => 'PaymentInstruments' in self)(),
+    featureDetection: `(async () => 'PaymentInstruments' in self)()`,
     documentation: 'https://web.dev/registering-a-web-based-payment-app/',
     blinkFeatureID: 2397,
   },
