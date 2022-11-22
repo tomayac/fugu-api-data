@@ -164,7 +164,7 @@ export default {
     where: 'JavaScript',
     supported: (async () => 'EyeDropper' in self)(),
     featureDetection: `(async () => 'EyeDropper' in self)()`,
-    documentation: 'https://github.com/WICG/eyedropper-api/blob/main/README.md',
+    documentation: 'https://web.dev/eyedropper/',
     blinkFeatureID: undefined,
   },
   'File Handling': {
