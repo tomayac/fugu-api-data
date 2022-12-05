@@ -185,6 +185,15 @@ const patterns = {
     documentation: 'https://web.dev/file-system-access/',
     blinkFeatureID: 3340,
   },
+  'Origin Private File System': {
+    regEx: /navigator\.storage\.getDirectory\s*\(\)/g,
+    where: 'JavaScript',
+    supported: (async () => 'getDirectory' in StorageManager.prototype)(),
+    featureDetection: `(async () => 'getDirectory' in StorageManager.prototype)()`,
+    documentation:
+      'https://developer.chrome.com/articles/file-system-access/#accessing-the-origin-private-file-system',
+    blinkFeatureID: 3428,
+  },
   'Gamepad': {
     regEx: /navigator\.getGamepads\s*\(/g,
     where: 'JavaScript',
