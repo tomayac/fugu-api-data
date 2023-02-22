@@ -1,6 +1,6 @@
 {
   "name": "fugu-api-data",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "description": "Data about Project Fugu 🐡 APIs.",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,6 @@
   "homepage": "https://github.com/tomayac/fugu-api-data#readme",
   "devDependencies": {
     "node-fetch": "^3.3.0",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.4"
   }
 }
