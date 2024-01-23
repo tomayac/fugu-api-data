@@ -281,7 +281,7 @@ const patterns = {
     documentation:
       'https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/',
     blinkFeatureID: undefined,
-    chromeStatusID: undefined,
+    chromeStatusID: 5961434129235968,
   },
   'Insertable streams for MediaStreamTrack': {
     regEx: /MediaStreamTrackProcessor\s*\(/g,
