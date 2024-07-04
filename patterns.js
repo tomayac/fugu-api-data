@@ -198,6 +198,16 @@ const patterns = {
     blinkFeatureID: 3875,
     chromeStatusID: 5721776357113856,
   },
+  'File System Observer': {
+    regEx: /new\s+FileSystemObserver\s*\(/g,
+    where: 'JavaScript',
+    supported: (async () => 'FileSystemObserver' in self)(),
+    featureDetection: `(async () => 'FileSystemObserver' in self)()`,
+    documentation:
+      'https://github.com/whatwg/fs/blob/main/proposals/FileSystemObserver.md',
+    blinkFeatureID: undefined,
+    chromeStatusID: 4622243656630272,
+  },
   'File System Access': {
     regEx:
       /showOpenFilePicker\s*\(|showSaveFilePicker\s*\(|showDirectoryPicker\s*\(/g,
