@@ -484,7 +484,7 @@ const patterns = {
         ((await navigator.serviceWorker?.ready) || self.registration))(),
     featureDetection: `(async () => 'serviceWorker' in navigator && 'pushManager' in (await navigator.serviceWorker?.ready || self.registration))()`,
     documentation: 'https://developer.mozilla.org/en-US/docs/Web/API/Push_API',
-    blinkFeatureID: 769,
+    blinkFeatureID: 371,
     chromeStatusID: 5416033485586432,
   },
   'Relative Orientation Sensor': {
