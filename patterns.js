@@ -819,4 +819,13 @@ const patterns = {
     blinkFeatureID: undefined,
     chromeStatusID: 5183481574850560,
   },
+  'WebMCP': {
+    regEx: /\bnavigator\.modelContext\.provideContext\s*\(/g,
+    where: 'JavaScript',
+    supported: (async () => 'modelContext' in navigator)(),
+    featureDetection: `(async () => 'modelContext' in navigator)()`,
+    documentation: 'https://github.com/webmachinelearning/webmcp',
+    blinkFeatureID: undefined,
+    chromeStatusID: 5117755740913664,
+  },
 };
