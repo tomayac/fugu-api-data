@@ -664,6 +664,15 @@ const patterns = {
     blinkFeatureID: 3888,
     chromeStatusID: 6213121689518080,
   },
+  'WebNN': {
+    regEx: /\bnavigator\.ml\.createContext\s*\(/g,
+    where: 'JavaScript',
+    supported: (async () => 'ml' in navigator)(),
+    featureDetection: `(async () => 'ml' in navigator)()`,
+    documentation: 'https://webnn.io/en/api-reference/reference',
+    blinkFeatureID: undefined,
+    chromeStatusID: 5176273954144256,
+  },
   'WebHID': {
     regEx: /\bnavigator\.hid\.requestDevice\s*\(/g,
     where: 'JavaScript',
